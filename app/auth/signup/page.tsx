@@ -10,7 +10,7 @@ import { Button } from "@/components/ui/button"
 import { Label } from "@/components/ui/label"
 import { createBrowserClient } from "@supabase/ssr"
 
-const supabase = createBrowserClient(process.env.NEXT_PUBLIC_SUPABASE_URL!, process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!)
+const supabase = createBrowserClient(process.env.SUPABASE_URL!, process.env.SUPABASE_ANON_KEY!)
 
 export default function SignUp() {
   const [email, setEmail] = useState("")
@@ -28,7 +28,7 @@ export default function SignUp() {
       const { data, error } = await supabase.auth.signUp({
         email,
         password,
-        options: { emailRedirectTo: process.env.NEXT_PUBLIC_DEV_SUPABASE_REDIRECT_URL || window.location.origin },
+  options: { emailRedirectTo: window.location.origin },
       })
 
       if (error) {
