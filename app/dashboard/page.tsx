@@ -1,3 +1,4 @@
+"use client"
 // Dashboard Page
 import React from "react"
 

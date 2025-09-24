@@ -1,3 +1,4 @@
+"use client"
 // Activity Page
 import React from "react"
 

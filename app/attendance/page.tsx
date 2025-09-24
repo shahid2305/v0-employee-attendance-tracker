@@ -1,3 +1,4 @@
+"use client"
 // Attendance Page
 import React from "react"
 

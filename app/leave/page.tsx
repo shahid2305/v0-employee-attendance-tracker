@@ -1,3 +1,4 @@
+"use client"
 // Leave Page
 import React from "react"
 
