@@ -2,11 +2,11 @@
 import { NextResponse } from "next/server"
 
 export async function GET(req: Request) {
-  // Return leave records (filter by employee, status, etc.)
-  return NextResponse.json({ message: "Leave records endpoint" })
+  // Return leave records (mock data for testing)
+  return NextResponse.json({ records: [] })
 }
 
 export async function POST(req: Request) {
-  // Apply for leave
+  // Apply for leave (mock response for testing)
   return NextResponse.json({ message: "Leave application endpoint" })
 }

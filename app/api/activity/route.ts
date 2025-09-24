@@ -2,11 +2,11 @@
 import { NextResponse } from "next/server"
 
 export async function GET(req: Request) {
-  // Return activity logs (filter by employee, project, etc.)
-  return NextResponse.json({ message: "Activity logs endpoint" })
+  // Return activity logs (mock data for testing)
+  return NextResponse.json({ records: [] })
 }
 
 export async function POST(req: Request) {
-  // Log new activity/task
+  // Log new activity/task (mock response for testing)
   return NextResponse.json({ message: "Activity logging endpoint" })
 }

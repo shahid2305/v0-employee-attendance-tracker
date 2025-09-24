@@ -1,36 +1,19 @@
-import type React from "react"
-import type { Metadata } from "next"
-import { Inter } from "next/font/google"
-import { Analytics } from "@vercel/analytics/next"
-import "./globals.css"
-import { createServerClient } from "@supabase/ssr"
-import { redirect } from "next/navigation"
-import { cookies } from "next/headers"
+import React from "react"
 
-const inter = Inter({
-  variable: '--font-inter',
-  subsets: ['latin'],
-})
-
-export const metadata: Metadata = {
-  title: "v0 App",
-  description: "Created with v0",
-  generator: "v0.app",
-}
-
-export default async function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode
-}>) {
-  // Authentication/session should be handled client-side for Cloudflare compatibility
-
+export default function HomePage() {
   return (
-  <html lang="en" className={`${inter.variable}`}>
-      <body>
-        {children}
-        <Analytics />
-      </body>
-    </html>
+    <main className="p-8">
+      <h1 className="text-3xl font-bold mb-4">Employee Attendance & Activity Tracker</h1>
+      <p className="mb-6">Welcome! Use the navigation above to access attendance, leave, activity, dashboard, and admin tools.</p>
+      <div className="bg-white rounded shadow p-4">
+        <ul className="list-disc pl-6">
+          <li>Attendance Tracking</li>
+          <li>Leave Management</li>
+          <li>Activity Logging</li>
+          <li>Dashboards & Reports</li>
+          <li>Admin & HR Tools</li>
+        </ul>
+      </div>
+    </main>
   )
 }
