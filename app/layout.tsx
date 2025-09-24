@@ -19,6 +19,11 @@ export const metadata: Metadata = {
   generator: 'v0.app',
 }
 
+import Nav from "@/components/nav"
+
+// TODO: Replace with actual role from auth/session
+const userRole = "Admin" // Example: "Admin", "HR", "Manager", "Employee"
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -27,6 +32,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`font-sans ${geistSans.variable} ${geistMono.variable}`}>
+        <Nav role={userRole} />
         {children}
         <Analytics />
       </body>
