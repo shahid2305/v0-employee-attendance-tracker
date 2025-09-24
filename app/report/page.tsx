@@ -1,3 +1,4 @@
+"use client"
 // Report Page
 import React from "react"
 
