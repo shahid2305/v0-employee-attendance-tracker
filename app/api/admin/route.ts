@@ -1,6 +1,8 @@
 // Admin API Route
 import { NextResponse } from "next/server"
 
+export const runtime = 'edge';
+
 export async function GET(req: Request) {
   // Return admin tools data (mock data for testing)
   return NextResponse.json({ policies: [], geofences: [] })

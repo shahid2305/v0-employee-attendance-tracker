@@ -1,6 +1,8 @@
 // Activity API Route
 import { NextResponse } from "next/server"
 
+export const runtime = 'edge';
+
 export async function GET(req: Request) {
   // Return activity logs (mock data for testing)
   return NextResponse.json({ records: [] })

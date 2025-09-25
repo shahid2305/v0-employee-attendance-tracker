@@ -1,6 +1,8 @@
 // Leave API Route
 import { NextResponse } from "next/server"
 
+export const runtime = 'edge';
+
 export async function GET(req: Request) {
   // Return leave records (mock data for testing)
   return NextResponse.json({ records: [] })
